@@ -9,18 +9,21 @@
     "@types/jest": "^22.2.3",
     "@types/node": "^8.5.5",
     "jest": "^22.4.3",
+    "semantic-release": "^15.1.7",
     "ts-jest": "^22.4.4",
     "typescript": "^2.8.3"
   },
   "scripts": {
     "test": "jest",
-    "prepublishOnly": "tsc -d -p ./ --outDir dist/"
+    "prepublishOnly": "tsc -d -p ./ --outDir dist/",
+    "release": "semantic-release"
   },
   "jest": {
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "testPathIgnorePatterns": ["/node_modules/", "/dist/"],
     "moduleFileExtensions": [
       "ts",
       "tsx",
@@ -28,6 +31,11 @@
       "jsx",
       "json",
       "node"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/**/*.d.ts",
+      "!dist/**"
     ]
   }
 }
