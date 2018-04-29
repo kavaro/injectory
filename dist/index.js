@@ -1,5 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * class DI
+ *
+ * Dependency injection class
+ */
 class DI {
     constructor() {
         this._factories = {};

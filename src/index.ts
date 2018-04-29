@@ -2,6 +2,11 @@ export type FactoryFn = (di: DI) => any;
 export type DecorateFactoryFn = (base: any) => (di: DI) => any;
 export type Factories = {[key:string]: FactoryFn};
 
+/**
+ * class DI
+ *
+ * Dependency injection class
+ */
 export default class DI {
     private _factories: Factories = {};
 
