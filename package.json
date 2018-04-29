@@ -16,14 +16,17 @@
   "scripts": {
     "test": "jest",
     "prepublishOnly": "tsc -d -p ./ --outDir dist/",
-    "release": "semantic-release"
+    "release": "semantic-release --no-ci"
   },
   "jest": {
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "testPathIgnorePatterns": ["/node_modules/", "/dist/"],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/dist/"
+    ],
     "moduleFileExtensions": [
       "ts",
       "tsx",
