@@ -1,6 +1,6 @@
-type FactoryFn = (di: DI) => any;
-type DecorateFactoryFn = (base: any) => (di: DI) => any;
-type Factories = {[key:string]: FactoryFn};
+export type FactoryFn = (di: DI) => any;
+export type DecorateFactoryFn = (base: any) => (di: DI) => any;
+export type Factories = {[key:string]: FactoryFn};
 
 export default class DI {
     private _factories: Factories = {};
