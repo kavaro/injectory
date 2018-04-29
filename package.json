@@ -1,0 +1,32 @@
+{
+  "name": "injectory",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^22.2.3",
+    "@types/node": "^8.5.5",
+    "jest": "^22.4.3",
+    "ts-jest": "^22.4.4",
+    "typescript": "^2.8.3"
+  },
+  "scripts": {
+    "test": "jest",
+    "publish": ""
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
+}
